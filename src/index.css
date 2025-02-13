@@ -1,33 +1,65 @@
+/* App.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @keyframes float {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-  50% { transform: translateY(-100vh) rotate(360deg); opacity: 0.3; }
-  100% { transform: translateY(-200vh) rotate(720deg); opacity: 0; }
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-200vh) rotate(720deg);
+    opacity: 0;
+  }
 }
 
 .animate-float {
   animation: float 8s linear infinite;
 }
 
-/* Smooth transitions for modals */
+/* Modal Transitions */
 .modal-enter {
   opacity: 0;
   transform: scale(0.95);
 }
+
 .modal-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: opacity 300ms, transform 300ms;
 }
+
 .modal-exit {
   opacity: 1;
   transform: scale(1);
 }
+
 .modal-exit-active {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 300ms, transform 300ms;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e11d48;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #be123c;
 }
