@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  safelist: [
+    'animate-float-0',
+    'animate-float-1',
+    'animate-float-2'
+  ],
   theme: {
     extend: {
       typography: {
